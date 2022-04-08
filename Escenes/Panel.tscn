@@ -19,6 +19,5 @@ margin_right = 40.0
 margin_bottom = 40.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "0"
 align = 1
 valign = 1
