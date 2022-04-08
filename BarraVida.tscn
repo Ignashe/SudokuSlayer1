@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="BarraVida" type="HBoxContainer"]
+margin_right = 67.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect"]
+margin_right = 40.0
+margin_bottom = 40.0
