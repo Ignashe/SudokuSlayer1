@@ -41,9 +41,66 @@ func show():
 				panels[i * fila + j].get_node("Label").text = str(numero)
 				
 func fill_numbers():
-	for n in 3:
+	for n in 2:
 		var numeros = [ 1, 2, 3, 4, 5, 6]
 		numeros.shuffle()
-		for i in range(n * 3, n * 3 + 3):
-			for j in range(n * 3, n * 2 + 2):
+		for i in range(n * 2, n * 2 + 2):
+			for j in range(n * 3, n * 3 + 3):
 				arr[i * fila + j] = numeros.pop_back()
+	fill_buits()
+	
+func fill_buits():
+	var find_null = arr.find(null)
+	if find_null == -1:
+		return true
+	
+	var i = find_null / fila
+	var j = find_null % columna
+	
+	var candidats = get_numeros_candidats(i, j)
+	if !candidats:
+		return false
+	var fill
+	while candidats:
+		fill = candidats.pop_back()
+		arr[i * fila + j] = fill
+	
+	fill_buits()
+		
+	
+func get_numeros_candidats(i , j):
+	var numeros = [ 1, 2, 3, 4, 5, 6]
+	for numero in get_fila_numbers(i):
+		numeros.erase(numero)
+	for numero in get_columna_numbers(j):
+		numeros.erase(numero)
+	for numero in get_area_numbers(i ,j):
+		numeros.erase(numero)
+	return numeros
+
+func get_fila_numbers(i):
+	var resolucio = []
+	for j in columna:
+		var numero = arr[i * fila + j]
+		if numero:
+			resolucio.append(numero)
+	return resolucio
+
+func get_columna_numbers(j):
+	var resolucio = []
+	for i in fila:
+		var numero = arr[i * fila + j]
+		if numero:
+			resolucio.append(numero)
+	return resolucio
+	
+func get_area_numbers(i ,j):
+	var distancia_i = i / 3 * 2
+	var distancia_j = j / 3 * 3
+	var resolucio = []
+	for area_i in range(distancia_i, distancia_i + 2):
+		for area_j in range(distancia_j, distancia_j + 3):
+			var numero = arr[area_i * fila + area_j]
+			if numero:
+				resolucio.append(numero)
+	return resolucio
