@@ -7,7 +7,7 @@ func _process(delta):
 	escriure()
 	
 func escriure():
-	if ratoli == true:
+	if ratoli == true and text == '':
 		if Input.is_action_just_pressed("1"):
 			set_text('1')
 		if Input.is_action_just_pressed("2"):
@@ -31,9 +31,6 @@ func escriure():
 func _on_MarginContainer2_mouse_entered():
 	print('in')
 	ratoli = true
-	
-
-
 func _on_MarginContainer2_mouse_exited():
 	print('out')
 	ratoli = false
