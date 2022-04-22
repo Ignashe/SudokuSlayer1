@@ -18,7 +18,7 @@ custom_constants/hseparation = 42
 columns = 9
 script = ExtResource( 2 )
 
-[node name="Casella" parent="GridContainer" instance=ExtResource( 1 )]
+[node name="Casella1" parent="GridContainer" instance=ExtResource( 1 )]
 
 [node name="Casella2" parent="GridContainer" instance=ExtResource( 1 )]
 margin_left = 42.0
