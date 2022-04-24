@@ -10,7 +10,7 @@ func _ready():
 	dins_arr()
 	fill_numbers()
 	show()
-
+	print(arr)
 func dins_graella():
 	var distancia_x = 0
 	var distancia_y = 0 

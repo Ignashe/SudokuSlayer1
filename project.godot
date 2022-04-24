@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "GridContainer",
+"class": "Sudoku",
+"language": "GDScript",
+"path": "res://Escenes/GridContainer.gd"
+} ]
+_global_script_class_icons={
+"Sudoku": ""
+}
+
 [application]
 
 config/name="Sudoku2"
