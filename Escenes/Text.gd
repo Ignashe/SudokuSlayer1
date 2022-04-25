@@ -29,8 +29,8 @@ func escriure():
 	
 
 func _on_MarginContainer2_mouse_entered():
-	print('in')
+	
 	ratoli = true
 func _on_MarginContainer2_mouse_exited():
-	print('out')
+	
 	ratoli = false
