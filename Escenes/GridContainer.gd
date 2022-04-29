@@ -1,5 +1,8 @@
 extends GridContainer
 
+onready var Sudoku = get_node("res://Escenes/Sudoku.tscn/Sudoku")
+func _ready():
+	print(Sudoku._crea_sudoku())
 #var files = [] 
 #var columnes = []
 #var x = 0
