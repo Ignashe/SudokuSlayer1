@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/—Pngtree—game start button_2364610.png-1213a4c90a2abfefaa9e92904931ef43.stex"
+path="res://.import/Sense títol.png-8a7e5e485de3816aaf2177491df8e9df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://—Pngtree—game start button_2364610.png"
-dest_files=[ "res://.import/—Pngtree—game start button_2364610.png-1213a4c90a2abfefaa9e92904931ef43.stex" ]
+source_file="res://imatges/Sense títol.png"
+dest_files=[ "res://.import/Sense títol.png-8a7e5e485de3816aaf2177491df8e9df.stex" ]
 
 [params]
 

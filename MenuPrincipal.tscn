@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://santiago-banol-yandros-image.jpg" type="Texture" id=1]
-[ext_resource path="res://Biker_idle.png" type="Texture" id=3]
+[ext_resource path="res://imatges/santiago-banol-yandros-image.jpg" type="Texture" id=1]
+[ext_resource path="res://imatges/TITOLfinal.png" type="Texture" id=2]
+[ext_resource path="res://imatges/Biker_idle.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -39,16 +40,18 @@ position = Vector2( 194.75, 289.75 )
 scale = Vector2( 4.92708, 5.44792 )
 frames = SubResource( 5 )
 animation = "menu"
-frame = 2
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
-position = Vector2( 832, 286 )
+position = Vector2( 855.25, 289.75 )
 scale = Vector2( 4.92708, 5.44792 )
 frames = SubResource( 5 )
 animation = "menu"
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="TitoLfinal" type="Sprite" parent="."]
+position = Vector2( 507, 125 )
+texture = ExtResource( 2 )

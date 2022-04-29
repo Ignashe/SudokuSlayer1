@@ -11,8 +11,6 @@ config_version=4
 [application]
 
 config/name="Sudoku2"
-run/main_scene="res://proba.tscn"
-config/icon="res://icon.png"
 
 [physics]
 

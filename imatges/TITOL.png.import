@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cooltext408378293810122.png-3823b90541d3aa70cb16f95b5f9f1ecd.stex"
+path="res://.import/TITOL.png-b7f8c4111c7b01f6008b57ae850e1c42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cooltext408378293810122.png"
-dest_files=[ "res://.import/cooltext408378293810122.png-3823b90541d3aa70cb16f95b5f9f1ecd.stex" ]
+source_file="res://imatges/TITOL.png"
+dest_files=[ "res://.import/TITOL.png-b7f8c4111c7b01f6008b57ae850e1c42.stex" ]
 
 [params]
 

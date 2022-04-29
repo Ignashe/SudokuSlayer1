@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://imatges/Captura de pantalla 2022-04-29 121126.jpg" type="Texture" id=1]
+
+[node name="Control" type="Control"]
+anchor_left = 0.371
+anchor_top = 0.102
+anchor_right = 0.627
+anchor_bottom = 0.873
+margin_left = 0.0959778
+margin_top = -0.200005
+margin_right = -0.0480347
+margin_bottom = 0.200012
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_top = 0.118
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -44.634
+texture = ExtResource( 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/santiago-banol-yandros-image.jpg-c27738835a2f776b4a82d09838f48af5.stex"
+path="res://.import/santiago-banol-yandros-image.jpg-5535031daa83195801c9e945c968dfc9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://santiago-banol-yandros-image.jpg"
-dest_files=[ "res://.import/santiago-banol-yandros-image.jpg-c27738835a2f776b4a82d09838f48af5.stex" ]
+source_file="res://imatges/santiago-banol-yandros-image.jpg"
+dest_files=[ "res://.import/santiago-banol-yandros-image.jpg-5535031daa83195801c9e945c968dfc9.stex" ]
 
 [params]
 

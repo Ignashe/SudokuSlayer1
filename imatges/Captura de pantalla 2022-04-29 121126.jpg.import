@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Biker_idle.png-c4363697f8ff7cd5f85e25b408c3d6bc.stex"
+path="res://.import/Captura de pantalla 2022-04-29 121126.jpg-12afab7b026e9d8d1ef908ef83faff95.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Biker_idle.png"
-dest_files=[ "res://.import/Biker_idle.png-c4363697f8ff7cd5f85e25b408c3d6bc.stex" ]
+source_file="res://imatges/Captura de pantalla 2022-04-29 121126.jpg"
+dest_files=[ "res://.import/Captura de pantalla 2022-04-29 121126.jpg-12afab7b026e9d8d1ef908ef83faff95.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

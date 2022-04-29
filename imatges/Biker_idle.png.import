@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cooltext408378414542767.png-5966af47a7f20d1086d6d89ccf6656e2.stex"
+path="res://.import/Biker_idle.png-7dec3d5e67b9fc305fbf44a051f575c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cooltext408378414542767.png"
-dest_files=[ "res://.import/cooltext408378414542767.png-5966af47a7f20d1086d6d89ccf6656e2.stex" ]
+source_file="res://imatges/Biker_idle.png"
+dest_files=[ "res://.import/Biker_idle.png-7dec3d5e67b9fc305fbf44a051f575c7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
