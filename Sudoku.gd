@@ -5,13 +5,15 @@ var columna = 9
 var tamany = 40
 var Panel_scene = preload("res://Escenes/Panel.tscn")
 var arr = []
+var sudoku = []
 func _ready():
-	dins_graella()
+#	dins_graella()
 	dins_arr()
 	fill_numbers()
-	show()
+#	show()
 	print(arr)
-func dins_graella():
+	return(arr)
+#func dins_graella():
 	var distancia_x = 0
 	var distancia_y = 0 
 	for i in fila:
@@ -32,7 +34,7 @@ func dins_arr():
 		for j in columna:
 			arr.append(null)
 
-func show():
+#func show():
 	var panels = get_children()
 	for i in fila:
 		for j in columna:
@@ -43,6 +45,7 @@ func show():
 func fill_numbers():
 	for n in 3:
 		var numeros = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
+		randomize()
 		numeros.shuffle()
 		for i in range(n * 3, n * 3 + 3):
 			for j in range(n * 3, n * 3 + 3):
@@ -107,3 +110,11 @@ func get_area_numbers(i ,j):
 			if numero:
 				resolucio.append(numero)
 	return resolucio
+func set_arr():
+	for i in range(9):
+		sudoku.append([])
+		for j in range(9):
+			sudoku[i].append(arr[i*9 + j])
+			
+		
+			
