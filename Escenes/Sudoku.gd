@@ -5,12 +5,13 @@ var columna = 9
 var tamany = 40
 var arr = []
 var sudoku = []
-func _crea_sudoku():
+
+func crea_sudoku():
 	dins_arr()
 	fill_numbers()
 	set_arr()
-	print(sudoku)
-	return(sudoku)
+	return sudoku
+
 
 func dins_arr():
 	for i in fila:
