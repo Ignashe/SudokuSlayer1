@@ -1,24 +1,21 @@
 extends GridContainer
 
-var dict = {}
-var caselles_nom = []
-var num = []
+
+var sudoku = Sudoku.crea_sudoku()
 func _ready():
-	var sudoku = Sudoku.crea_sudoku()
-	print(sudoku)
-#	var caselles = get_children()
-#	for i in caselles:
-#		caselles_nom.append(i.name)
-#
-#	for i in sudoku:
-#		for element in i:
-#			num.append(element)
-#	print(caselles_nom)
-#	print(num)
-#	for key in caselles_nom:
-#		for value in num:
-#			dict[key] = value
-#			num.remove(value)
-#	print(dict)
-func _elimina_num():
-	pass
+	_escriure()
+
+func _escriure():
+	var panels = get_children()
+	var x = 0
+	while x < 81:
+		for i in sudoku:
+			for numero in i:
+				panels[x].get_node("MarginContainer/Text").text = str(numero)
+				x += 1
+
+
+
+
+	
+	
