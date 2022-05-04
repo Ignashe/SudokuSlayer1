@@ -6,9 +6,11 @@ var tamany = 40
 var arr = []
 var sudoku = []
 
+
 func crea_sudoku():
 	dins_arr()
 	fill_numbers()
+	_eliminar_num()
 	set_arr()
 	return sudoku
 
@@ -30,7 +32,7 @@ func fill_numbers():
 			for j in range(n * 3, n * 3 + 3):
 				arr[i * fila + j] = numeros.pop_back()
 	fill_buits()
-
+	
 func fill_buits():
 	var find_null = arr.find(null)
 
@@ -94,6 +96,13 @@ func set_arr():
 		sudoku.append([])
 		for j in range(9):
 			sudoku[i].append(arr[i*9 + j])
-			
+
+func _eliminar_num():
+	print(arr)
+	for i in fila:
+		for j in columna:
+			var candidats = get_numeros_candidats(i, j)
+			if candidats.empty():
+				arr[i*fila+j] = null
 		
 			
