@@ -12,6 +12,7 @@ func crea_sudoku():
 	fill_numbers()
 	_eliminar_num()
 	set_arr()
+	resolucio()
 	return sudoku
 
 
@@ -99,10 +100,23 @@ func set_arr():
 
 func _eliminar_num():
 	print(arr)
+	print('\n')
 	for i in fila:
 		for j in columna:
 			var candidats = get_numeros_candidats(i, j)
 			if candidats.empty():
 				arr[i*fila+j] = null
-		
-			
+func resolucio():
+	print(arr)
+	for i in fila:
+		for j in columna:
+			randomize()
+			var candidats = get_numeros_candidats(i,j)
+			candidats.shuffle()
+			for numero in arr:
+				if len(candidats) == 0:
+					pass
+				elif numero == null:
+					arr[i*fila+j] = candidats[0]
+	print('\n')
+	print(arr)
