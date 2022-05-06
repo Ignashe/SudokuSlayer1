@@ -5,7 +5,7 @@ var columna = 9
 var tamany = 40
 var arr = []
 var sudoku = []
-
+var sudoku_a_resoldre 
 
 func crea_sudoku():
 	dins_arr()
@@ -32,10 +32,10 @@ func fill_numbers():
 		for i in range(n * 3, n * 3 + 3):
 			for j in range(n * 3, n * 3 + 3):
 				arr[i * fila + j] = numeros.pop_back()
-	fill_buits()
+	fill_buits(arr)
 	
-func fill_buits():
-	var find_null = arr.find(null)
+func fill_buits(list):
+	var find_null = list.find(null)
 
 	if find_null == -1:
 		return true
@@ -51,11 +51,12 @@ func fill_buits():
 
 	while candidats:
 		fill = candidats.pop_back()
-		arr[i * fila + j] = fill
-		if fill_buits():
+		list[i * fila + j] = fill
+		if fill_buits(list):
 			return true
 		else:
-			arr[i * fila + j] = null
+			list[i * fila + j] = null
+
 func get_numeros_candidats(i , j):
 	var numeros = [ 1, 2, 3, 4, 5, 6, 7 , 8, 9]
 	for numero in get_fila_numbers(i):
@@ -107,16 +108,21 @@ func _eliminar_num():
 			if candidats.empty():
 				arr[i*fila+j] = null
 func resolucio():
-	print(arr)
-	for i in fila:
-		for j in columna:
-			randomize()
-			var candidats = get_numeros_candidats(i,j)
-			candidats.shuffle()
-			for numero in arr:
-				if len(candidats) == 0:
-					pass
-				elif numero == null:
-					arr[i*fila+j] = candidats[0]
+#	print(arr)
+	var resolt = false
+	sudoku_a_resoldre = arr.duplicate() 
+	var espais = sudoku_a_resoldre.find(null)
+	var i = espais / 9
+	var j = espais % 9
+	
+#	while not resolt:
+#		var candidats = get_numeros_candidats(i,j)
+#		if candidats:
+#			sudoku_a_resoldre[i*fila+j] = candidats[0]
+#		if !candidats:
+#			sudoku_a_resoldre[i*fila+j] = null
+#			sudoku_a_resoldre[(i-1)*fila+(j-1)] = null
+	print(sudoku_a_resoldre)
+	fill_buits(sudoku_a_resoldre)
 	print('\n')
-	print(arr)
+	print(sudoku_a_resoldre)
