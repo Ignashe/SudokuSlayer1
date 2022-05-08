@@ -13,7 +13,6 @@ func crea_sudoku():
 	_eliminar_num()
 	set_arr()
 	resolucio()
-	print(sudoku)
 	return sudoku
 
 

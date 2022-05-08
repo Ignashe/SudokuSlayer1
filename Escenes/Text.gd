@@ -1,10 +1,12 @@
 extends Label
+
 var ratoli = false
 
 func _ready():
 	pass
 func _process(delta):
 	escriure()
+	
 	
 func escriure():
 	if ratoli == true and text == '':
