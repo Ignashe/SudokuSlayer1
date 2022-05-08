@@ -13,6 +13,7 @@ func crea_sudoku():
 	_eliminar_num()
 	set_arr()
 	resolucio()
+	print(sudoku)
 	return sudoku
 
 
@@ -100,8 +101,6 @@ func set_arr():
 			sudoku[i].append(arr[i*9 + j])
 
 func _eliminar_num():
-	print(arr)
-	print('\n')
 	var posicions_quadrat = [0,1,2,9,10,11,18,19,20]
 	randomize()
 	var posicions_fila = [3,4,5,6,7,8]
@@ -119,7 +118,6 @@ func _eliminar_num():
 	
 	arr[posicions_quadrat[0]] = numero
 	arr[posicions_fila[0]] = numero_2
-	print(arr)
 	
 func resolucio():
 	pass
