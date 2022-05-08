@@ -58,7 +58,7 @@ func fill_buits(list):
 			list[i * fila + j] = null
 
 func get_numeros_candidats(i , j):
-	var numeros = [ 1, 2, 3, 4, 5, 6, 7 , 8, 9]
+	var numeros = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
 	for numero in get_fila_numbers(i):
 		numeros.erase(numero)
 	for numero in get_columna_numbers(j):
@@ -102,27 +102,41 @@ func set_arr():
 func _eliminar_num():
 	print(arr)
 	print('\n')
+	var posicions_quadrat = [0,1,2,9,10,11,18,19,20]
+	randomize()
+	var posicions_fila = [3,4,5,6,7,8]
+	var x = 0
+	posicions_quadrat.shuffle()
+	posicions_fila.shuffle()
+	randomize()
+	var numero = arr[posicions_quadrat[0]] 
+	var numero_2 = arr[posicions_fila[0]]
 	for i in fila:
 		for j in columna:
 			var candidats = get_numeros_candidats(i, j)
 			if candidats.empty():
 				arr[i*fila+j] = null
-func resolucio():
-#	print(arr)
-	var resolt = false
-	sudoku_a_resoldre = arr.duplicate() 
-	var espais = sudoku_a_resoldre.find(null)
-	var i = espais / 9
-	var j = espais % 9
 	
-#	while not resolt:
-#		var candidats = get_numeros_candidats(i,j)
-#		if candidats:
-#			sudoku_a_resoldre[i*fila+j] = candidats[0]
-#		if !candidats:
-#			sudoku_a_resoldre[i*fila+j] = null
-#			sudoku_a_resoldre[(i-1)*fila+(j-1)] = null
-	print(sudoku_a_resoldre)
-	fill_buits(sudoku_a_resoldre)
-	print('\n')
-	print(sudoku_a_resoldre)
+	arr[posicions_quadrat[0]] = numero
+	arr[posicions_fila[0]] = numero_2
+	print(arr)
+	
+func resolucio():
+	pass
+#	var resolt = false
+#	sudoku_a_resoldre = arr.duplicate() 
+#	var espais = sudoku_a_resoldre.find(null)
+#	var i = espais / 9
+#	var j = espais % 9
+#
+##	while not resolt:
+##		var candidats = get_numeros_candidats(i,j)
+##		if candidats:
+##			sudoku_a_resoldre[i*fila+j] = candidats[0]
+##		if !candidats:
+##			sudoku_a_resoldre[i*fila+j] = null
+##			sudoku_a_resoldre[(i-1)*fila+(j-1)] = null
+#	print(sudoku_a_resoldre)
+#	fill_buits(arr)
+#	print('\n')
+#	print(arr)
