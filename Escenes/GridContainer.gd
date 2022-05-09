@@ -11,7 +11,7 @@ func _ready():
 	print(sudoku)
 	_escriure()
 	correcte()
-	return(sudoku_escrit)
+	
 func _escriure():
 	var panels = get_children()
 	var x = 0
@@ -30,5 +30,7 @@ func correcte():
 	while x < 81:
 		sudoku_escrit.append(panels[x].get_node("MarginContainer/Text").text)
 		x += 1
-	return sudoku_escrit
+	var files = 
+
+	
 

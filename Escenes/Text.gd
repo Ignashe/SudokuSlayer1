@@ -1,13 +1,20 @@
 extends Label
 
 var ratoli = false
-
+onready var sudoku = get_node('GridContainer')
+var sudoku_escrit = []
 func _ready():
 	pass
 func _process(delta):
 	escriure()
-	
-	
+#	_text()
+#func _text():
+#	var panels = sudoku.get_children()
+#	var x = 0
+#	while x < 81:
+#		sudoku_escrit.append(panels[x].get_node("MarginContainer/Text").text)
+#		x += 1
+#	print(sudoku_escrit)
 func escriure():
 	if ratoli == true and text == '':
 		if Input.is_action_just_pressed("1"):
