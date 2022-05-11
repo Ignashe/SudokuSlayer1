@@ -5,14 +5,13 @@ var columna = 9
 var tamany = 40
 var arr = []
 var sudoku = []
-var sudoku_a_resoldre 
+var sudoku_resolt 
 
 func crea_sudoku():
 	dins_arr()
 	fill_numbers()
 	_eliminar_num()
 	set_arr()
-	resolucio()
 	return sudoku
 
 
@@ -33,6 +32,7 @@ func fill_numbers():
 			for j in range(n * 3, n * 3 + 3):
 				arr[i * fila + j] = numeros.pop_back()
 	fill_buits(arr)
+	sudoku_resolt = arr.duplicate()
 	
 func fill_buits(list):
 	var find_null = list.find(null)
@@ -118,22 +118,4 @@ func _eliminar_num():
 	arr[posicions_quadrat[0]] = numero
 	arr[posicions_fila[0]] = numero_2
 	
-func resolucio():
-	pass
-#	var resolt = false
-#	sudoku_a_resoldre = arr.duplicate() 
-#	var espais = sudoku_a_resoldre.find(null)
-#	var i = espais / 9
-#	var j = espais % 9
-#
-##	while not resolt:
-##		var candidats = get_numeros_candidats(i,j)
-##		if candidats:
-##			sudoku_a_resoldre[i*fila+j] = candidats[0]
-##		if !candidats:
-##			sudoku_a_resoldre[i*fila+j] = null
-##			sudoku_a_resoldre[(i-1)*fila+(j-1)] = null
-#	print(sudoku_a_resoldre)
-#	fill_buits(arr)
-#	print('\n')
-#	print(arr)
+
