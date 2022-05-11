@@ -35,5 +35,6 @@ func correcte():
 	
 func _on_casella_canviada(fila, columna, n):
 		print('He canviat (%d, %d)' % [fila, columna])
-		print(n)
+		for numero in sudoku_resolt:
+			pass
 
