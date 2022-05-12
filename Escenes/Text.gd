@@ -13,7 +13,7 @@ func escriure():
 	if ratoli == true and text == '':
 		for n in "123456789":
 			if Input.is_action_just_pressed(n):
-				emit_signal("casella_canviada", fila, columna, n)
+				emit_signal("casella_canviada", fila, columna, n, Label)
 				
 
 func _on_MarginContainer2_mouse_entered():
