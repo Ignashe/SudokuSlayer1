@@ -33,10 +33,11 @@ func correcte():
 		sudoku_escrit.append(panels[x].get_node("MarginContainer/Text").text)
 		x += 1
 	
-func _on_casella_canviada(fila, columna, n, Label):
+func _on_casella_canviada(fila, columna, n, casella):
 		print('He canviat (%d, %d)' % [fila, columna])
-		var resolucio = sudoku_resolt[fila * 9 * columna]
-		print(resolucio)
+		var resolucio = sudoku_resolt[columna*9+fila]
+		var c = get_node(casella)
 		if str(resolucio) == n:
-			Label.set_text(n)
-
+			c.set_text(n)
+			sudoku_escrit[columna*9+fila] = n
+			
