@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends VBoxContainer
 
 
 # Declare member variables here. Examples:
@@ -16,9 +16,9 @@ func _ready():
 #	pass
 
 
-func _on_OPCIONS_pressed():
-	get_tree().change_scene("res://opcions.tscn")
+func _on_Opcions_pressed():
+	get_tree().change_scene("res://settings.tscn")
 
 
-func _on_SORTIR_pressed():
-	get_tree().change_scene("res://MenuPrincipal.tscn")
+func _on_sortir_pressed():
+	pass
