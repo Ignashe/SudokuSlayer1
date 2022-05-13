@@ -29,7 +29,6 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=10]
 radius = 26.0
-height = 24.0
 
 [node name="Personatge" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -39,12 +38,12 @@ position = Vector2( 111, 72 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 2
+frame = 1
 speed_scale = 2.0
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 111, 80 )
+position = Vector2( 112, 83 )
 shape = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
