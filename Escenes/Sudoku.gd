@@ -7,6 +7,8 @@ var arr = []
 var sudoku = []
 var sudoku_resolt 
 
+
+
 func crea_sudoku():
 	dins_arr()
 	fill_numbers()
@@ -93,6 +95,7 @@ func get_area_numbers(i ,j):
 			if numero:
 				resolucio.append(numero)
 	return resolucio
+	
 func set_arr():
 	for i in range(9):
 		sudoku.append([])

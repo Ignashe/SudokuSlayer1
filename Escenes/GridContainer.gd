@@ -10,7 +10,8 @@ onready var timer = get_node('../Canvi de color')
 var caselles_canviades = []
 
 func _ready():
-	timer.set_wait_time(1)
+	Global.update_errors()
+	timer.set_wait_time(0.25)
 	_escriure()
 	sudoku_escrit()
 	
@@ -39,9 +40,9 @@ func _error(casella,color):
 		color.modulate = Color(255,0,0)
 		caselles_canviades.append(color)
 		timer.start()
-		
+		Global.errors += 1
+		Global.update_errors()
 func _on_casella_canviada(fila, columna, n, casella, color):
-#		print('He canviat (%d, %d)' % [fila, columna])
 		var x = 0
 		var resolucio = sudoku_resolt[columna*9+fila]
 		var c = get_node(casella)
@@ -55,9 +56,11 @@ func _on_casella_canviada(fila, columna, n, casella, color):
 					if numero == '':
 						x += 1
 				if x == 0:
+					self.modulate = Color(0,255,0)
 					print('SOLUCIONAT') 
 
 
 func _on_Canvi_de_color_timeout():
 	for casella_canviada in caselles_canviades:
 		casella_canviada.modulate = Color(1,1,1)
+
