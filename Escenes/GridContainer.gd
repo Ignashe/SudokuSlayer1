@@ -6,9 +6,11 @@ var text = []
 var correcte = false
 var sudoku_escrit = []
 var sudoku_resolt = Sudoku.sudoku_resolt
-
+onready var timer = get_node('../Canvi de color')
+var caselles_canviades = []
 
 func _ready():
+	timer.set_wait_time(1)
 	_escriure()
 	sudoku_escrit()
 	
@@ -33,11 +35,18 @@ func sudoku_escrit():
 		sudoku_escrit.append(panels[x].get_node("MarginContainer/Text").text)
 		x += 1
 	
-func _on_casella_canviada(fila, columna, n, casella):
-		print('He canviat (%d, %d)' % [fila, columna])
+func _error(casella,color):
+		color.modulate = Color(255,0,0)
+		caselles_canviades.append(color)
+		timer.start()
+		
+func _on_casella_canviada(fila, columna, n, casella, color):
+#		print('He canviat (%d, %d)' % [fila, columna])
 		var x = 0
 		var resolucio = sudoku_resolt[columna*9+fila]
 		var c = get_node(casella)
+		if str(resolucio) != n:
+			_error(casella,color)
 		if str(resolucio) == n:
 			c.set_text(n)
 			sudoku_escrit[columna*9+fila] = n
@@ -47,3 +56,8 @@ func _on_casella_canviada(fila, columna, n, casella):
 						x += 1
 				if x == 0:
 					print('SOLUCIONAT') 
+
+
+func _on_Canvi_de_color_timeout():
+	for casella_canviada in caselles_canviades:
+		casella_canviada.modulate = Color(1,1,1)

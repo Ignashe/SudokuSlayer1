@@ -19,7 +19,7 @@ color = Color( 0, 0.0117647, 0.0117647, 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Color-Interior" type="ColorRect" parent="MarginContainer"]
+[node name="Color" type="ColorRect" parent="MarginContainer"]
 margin_right = 40.0
 margin_bottom = 40.0
 

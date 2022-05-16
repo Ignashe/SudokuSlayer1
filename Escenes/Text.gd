@@ -14,7 +14,10 @@ func escriure():
 		for n in "123456789":
 			if Input.is_action_just_pressed(n):
 				var casella = get_path()
-				emit_signal("casella_canviada", fila, columna, n, casella)
+				var pare = get_parent()
+				var pare_fills = pare.get_children()
+				var color = pare_fills[0]
+				emit_signal("casella_canviada", fila, columna, n, casella, color)
 				
 
 func _on_MarginContainer2_mouse_entered():
