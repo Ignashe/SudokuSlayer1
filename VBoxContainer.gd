@@ -21,4 +21,4 @@ func _on_Opcions_pressed():
 
 
 func _on_sortir_pressed():
-	pass
+	get_tree().quit()
