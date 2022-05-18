@@ -17,9 +17,10 @@ margin_bottom = 200.0
 [node name="Errors" type="Label" parent="CanvasLayer" groups=["errors"]]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -484.0
-margin_top = 58.0
-margin_right = -181.0
-margin_bottom = 99.0
+margin_left = -702.0
+margin_top = 157.0
+margin_right = -321.0
+margin_bottom = 198.0
 text = "
 "
+align = 1
