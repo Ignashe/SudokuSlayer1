@@ -12,21 +12,21 @@
 [ext_resource path="res://House 2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemic 2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Rock.tscn" type="PackedScene" id=12]
-[ext_resource path="res://kenney_rtssci-fi/PNG/Default size/Structure/scifiStructure_14.png" type="Texture" id=13]
 [ext_resource path="res://Enemic 3.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Fence.tscn" type="PackedScene" id=15]
 
 [node name="Overworld" type="Node2D"]
 
 [node name="Land" type="TextureRect" parent="."]
 margin_left = -1302.0
-margin_top = -834.0
+margin_top = -1477.0
 margin_right = 2113.0
 margin_bottom = 1779.0
 texture = ExtResource( 3 )
 stretch_mode = 2
 
-[node name="ScifiTile32" type="Sprite" parent="Land"]
-position = Vector2( 2282, 985 )
+[node name="ScifiTile32" type="Sprite" parent="."]
+position = Vector2( 980, 151 )
 texture = ExtResource( 9 )
 
 [node name="Vertical_Path" type="TextureRect" parent="."]
@@ -35,38 +35,6 @@ margin_top = -328.0
 margin_right = 384.0
 margin_bottom = 517.0
 texture = ExtResource( 7 )
-stretch_mode = 2
-
-[node name="Fences" type="TextureRect" parent="."]
-margin_left = 1350.0
-margin_top = -678.0
-margin_right = 1414.0
-margin_bottom = 733.0
-texture = ExtResource( 13 )
-stretch_mode = 2
-
-[node name="Fences3" type="TextureRect" parent="."]
-margin_left = -244.0
-margin_top = -677.0
-margin_right = -180.0
-margin_bottom = 668.0
-texture = ExtResource( 13 )
-stretch_mode = 2
-
-[node name="Fences2" type="TextureRect" parent="."]
-margin_left = -241.0
-margin_top = 666.0
-margin_right = 1366.0
-margin_bottom = 730.0
-texture = ExtResource( 13 )
-stretch_mode = 2
-
-[node name="Fences4" type="TextureRect" parent="."]
-margin_left = -250.0
-margin_top = -741.0
-margin_right = 1408.0
-margin_bottom = -677.0
-texture = ExtResource( 13 )
 stretch_mode = 2
 
 [node name="Vertical_Path2" type="TextureRect" parent="."]
@@ -84,6 +52,9 @@ margin_right = 949.0
 margin_bottom = 183.0
 texture = ExtResource( 6 )
 stretch_mode = 2
+
+[node name="Fence" parent="." instance=ExtResource( 15 )]
+position = Vector2( 944, -144 )
 
 [node name="ScifiTile05" type="Sprite" parent="."]
 position = Vector2( 343, 150 )
@@ -126,5 +97,3 @@ position = Vector2( 909, -181 )
 
 [node name="Rock" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 267, 441 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
