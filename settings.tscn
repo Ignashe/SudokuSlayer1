@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://media/Mario-Kart-DS.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://imatges/360_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://GUI.gd" type="Script" id=4]
 [ext_resource path="res://opcions.tscn" type="PackedScene" id=5]
 [ext_resource path="res://santiago-banol-yandros-image.jpg" type="Texture" id=6]
+[ext_resource path="res://imatges/images (1).jpg" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -80,7 +81,7 @@ margin_bottom = 136.0
 rect_min_size = Vector2( 220, 50 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/Continuar"]
@@ -99,7 +100,7 @@ margin_bottom = 195.0
 rect_min_size = Vector2( 220, 50 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/NOVA PARTIDA"]
@@ -118,7 +119,7 @@ margin_bottom = 254.0
 rect_min_size = Vector2( 220, 50 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/CARREGAR PARTIDA"]
@@ -137,7 +138,7 @@ margin_bottom = 313.0
 rect_min_size = Vector2( 220, 50 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/OPCIONS"]
@@ -156,7 +157,7 @@ margin_bottom = 372.0
 rect_min_size = Vector2( 220, 50 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/SORTIR"]

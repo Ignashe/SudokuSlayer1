@@ -16,12 +16,8 @@ func _ready():
 
 
 func _on_HSlider_value_changed(value):
-	var bus_idx = AudioServer.get_bus_index(bus_name)
-	if value > $HSlider.min_value:
-		AudioServer.set_bus_mute(bus_idx, false)
-		AudioServer.set_bus_volume_db(bus_idx, true)
-	else:
-		AudioServer.set_bus_mute(bus_idx, true)
+	AudioServer.set_bus_volume_db(1, linear2db(value))
+	AudioServer.set_bus_mute(1,value <0.01)
 
 func _on_Play_pressed():
 	audio_stream_player.play()

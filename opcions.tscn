@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://imatges/360_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg" type="Texture" id=1]
 [ext_resource path="res://imatges/images.jpg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://musica.gd" type="Script" id=5]
 [ext_resource path="res://media/Mario-Kart-DS.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://santiago-banol-yandros-image.jpg" type="Texture" id=7]
+[ext_resource path="res://imatges/images (1).jpg" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
@@ -17,8 +18,10 @@ size = 40
 font_data = ExtResource( 6 )
 
 [node name="Control" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -984.0
+margin_bottom = -560.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 512, 300 )
@@ -61,6 +64,8 @@ text = "MUSICA
 margin_top = 73.0
 margin_right = 735.0
 margin_bottom = 89.0
+min_value = -1.0
+max_value = 3.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/musica"]
 margin_top = 93.0
@@ -103,6 +108,8 @@ text = "SFX
 margin_top = 73.0
 margin_right = 730.0
 margin_bottom = 89.0
+min_value = -1.0
+max_value = 3.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/sfx"]
 margin_top = 93.0
@@ -131,7 +138,7 @@ grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
+texture_pressed = ExtResource( 8 )
 expand = true
 
 [node name="Label" type="Label" parent="NinePatchRect/sortirmusica"]
