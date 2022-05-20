@@ -18,10 +18,10 @@
 [node name="Overworld" type="Node2D"]
 
 [node name="Land" type="TextureRect" parent="."]
-margin_left = -1302.0
-margin_top = -1477.0
-margin_right = 2113.0
-margin_bottom = 1779.0
+margin_left = -1269.0
+margin_top = -1458.0
+margin_right = 2146.0
+margin_bottom = 1798.0
 texture = ExtResource( 3 )
 stretch_mode = 2
 
