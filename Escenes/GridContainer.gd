@@ -11,6 +11,7 @@ var caselles_canviades = []
 
 func _ready():
 	Global.update_errors()
+	Global.update_vida()
 	timer.set_wait_time(0.25)
 	_escriure()
 	sudoku_escrit()
@@ -42,6 +43,8 @@ func _error(casella,color):
 		timer.start()
 		Global.errors += 1
 		Global.update_errors()
+		Global.vida -= 10
+		Global.update_vida()
 func _on_casella_canviada(fila, columna, n, casella, color):
 		var x = 0
 		var resolucio = sudoku_resolt[columna*9+fila]
