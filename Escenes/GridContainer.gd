@@ -45,6 +45,10 @@ func _error(casella,color):
 		Global.update_errors()
 		Global.vida -= 10
 		Global.update_vida()
+func _encert():
+		Global.vida_enemic -= 10
+		Global.update_vida_enemic()
+		
 func _on_casella_canviada(fila, columna, n, casella, color):
 		var x = 0
 		var resolucio = sudoku_resolt[columna*9+fila]
@@ -54,6 +58,7 @@ func _on_casella_canviada(fila, columna, n, casella, color):
 		if str(resolucio) == n:
 			c.set_text(n)
 			sudoku_escrit[columna*9+fila] = n
+			_encert()
 			if sudoku_escrit:
 				for numero in sudoku_escrit:
 					if numero == '':
