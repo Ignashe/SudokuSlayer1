@@ -11,13 +11,14 @@ config_version=4
 [application]
 
 config/name="Sudoku2"
-run/main_scene="res://Escenes/Control.tscn"
+run/main_scene="res://Escenes/Combat.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Sudoku="*res://Escenes/Sudoku.gd"
 Global="*res://Global.gd"
+Text="*res://Escenes/Text.gd"
 
 [display]
 

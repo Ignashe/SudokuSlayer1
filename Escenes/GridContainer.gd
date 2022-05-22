@@ -35,6 +35,11 @@ func _process(delta):
 	var text = str('%02d : %02d' % [segons,mils])
 	
 	text_temps.set_text(var2str(text))
+	
+	if Global.vida == 0:
+		mort()
+	if Global.vida_enemic == 0:
+		guanyador()
 func _escriure():
 	var panels = get_children()
 	var x = 0
@@ -62,7 +67,10 @@ func _error(casella,color):
 		timer.start()
 		Global.vida -= 5
 		Global.update_vida()
-
+func mort():
+	pass
+func guanyador():
+	pass
 func _encert():
 		time = 15
 		Global.vida_enemic -= 2.5
@@ -84,7 +92,7 @@ func _on_casella_canviada(fila, columna, n, casella, color):
 						x += 1
 				if x == 0:
 					self.modulate = Color(0,255,0)
-					print('SOLUCIONAT') 
+					timer_on = false
 
 
 func _on_Canvi_de_color_timeout():

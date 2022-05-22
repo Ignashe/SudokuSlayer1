@@ -475,7 +475,7 @@ margin_right = 336.0
 margin_bottom = 336.0
 
 [node name="Sudoku-Grid" type="Sprite" parent="GridContainer"]
-position = Vector2( 0, -1 )
+position = Vector2( 0, -2 )
 scale = Vector2( 0.367187, 0.371094 )
 texture = ExtResource( 3 )
 centered = false
