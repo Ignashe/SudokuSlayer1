@@ -9,6 +9,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -1.0
 
+[node name="Temps de resposta" type="Timer" parent="."]
+wait_time = 15.0
+
 [node name="Canvi de color" type="Timer" parent="."]
 
 [node name="GridContainer" type="GridContainer" parent="."]
@@ -477,4 +480,5 @@ scale = Vector2( 0.367187, 0.371094 )
 texture = ExtResource( 3 )
 centered = false
 
+[connection signal="timeout" from="Temps de resposta" to="GridContainer" method="_on_Temps_de_resposta_timeout"]
 [connection signal="timeout" from="Canvi de color" to="GridContainer" method="_on_Canvi_de_color_timeout"]
