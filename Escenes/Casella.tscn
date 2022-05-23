@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Escenes/Text.gd" type="Script" id=2]
+
+[node name="Casella" type="Control"]
+
+[node name="Color-Marge" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 41.0
+margin_bottom = 41.0
+color = Color( 0, 0.0117647, 0.0117647, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Color" type="ColorRect" parent="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Text" type="Label" parent="MarginContainer"]
+margin_top = 13.0
+margin_right = 40.0
+margin_bottom = 26.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[connection signal="mouse_entered" from="MarginContainer/MarginContainer2" to="MarginContainer/Text" method="_on_MarginContainer2_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/MarginContainer2" to="MarginContainer/Text" method="_on_MarginContainer2_mouse_exited"]
+[connection signal="mouse_entered" from="MarginContainer/Text" to="MarginContainer/Text" method="_on_Text_mouse_entered"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Escenes/Control.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenes/BarraVida.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenes/BarraVidaEnemic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/new_dynamicfont2.tres" type="DynamicFont" id=4]
+
+[node name="Combat" type="Node2D"]
+
+[node name="Sudoku" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 323.0
+margin_top = 200.0
+margin_right = 323.0
+margin_bottom = 200.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Temps" type="Label" parent="CanvasLayer" groups=["Temps"]]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -579.0
+margin_top = 120.0
+margin_right = -198.0
+margin_bottom = 227.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "
+"
+
+[node name="BarraVida" parent="." instance=ExtResource( 2 )]
+
+[node name="BarraVidaEnemic" parent="." instance=ExtResource( 3 )]
+margin_left = 550.0
+margin_right = 550.0
