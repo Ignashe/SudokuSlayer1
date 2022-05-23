@@ -14,7 +14,6 @@ func _ready():
 	audio_stream_player = get_node(audio_stream_player_path)
 
 
-
 func _on_HSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(1, linear2db(value))
 	AudioServer.set_bus_mute(1,value <0.01)
