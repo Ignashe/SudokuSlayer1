@@ -4,7 +4,6 @@ extends GridContainer
 var sudoku = Sudoku.crea_sudoku()
 var buits = Sudoku.buits
 var text = []
-var correcte = false
 var sudoku_escrit = []
 var sudoku_resolt = Sudoku.sudoku_resolt
 onready var timer = get_node('../Canvi de color')
@@ -21,7 +20,8 @@ func _ready():
 	timer_on = true
 	timer.set_wait_time(0.25)
 	Global.update_vida()
-	Global.update_vida_enemic()
+	Global._update_maxim_vida(buits)
+	
 	
 	
 	_escriure()
@@ -76,10 +76,12 @@ func _encert():
 		timer_resposta.stop()
 		timer_on = false
 		time = 15
-		Global.vida_enemic -= 10
+		Global.vida_enemic -= 1
 		Global.update_vida_enemic()
+		Global.encert = true
 		timer_on = true
 		timer_resposta.start()
+		
 func _on_casella_canviada(fila, columna, n, casella, color):
 		var x = 0
 		var resolucio = sudoku_resolt[columna*9+fila]
@@ -96,7 +98,7 @@ func _on_casella_canviada(fila, columna, n, casella, color):
 						x += 1
 				if x == 0:
 					self.modulate = Color(0,255,0)
-					timer_on = false
+					timer_resposta.stop()
 
 
 func _on_Canvi_de_color_timeout():

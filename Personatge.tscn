@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://craftpix-net-647526-free-3-cyberpunk-characters-pixel-art/1 Biker/Biker_idle.png" type="Texture" id=1]
 [ext_resource path="res://craftpix-net-647526-free-3-cyberpunk-characters-pixel-art/1 Biker/Biker_hurt.png" type="Texture" id=2]
@@ -6,8 +6,25 @@
 [ext_resource path="res://craftpix-net-647526-free-3-cyberpunk-characters-pixel-art/1 Biker/Biker_attack1.png" type="Texture" id=4]
 [ext_resource path="res://craftpix-net-647526-free-3-cyberpunk-characters-pixel-art/1 Biker/Biker_attack2.png" type="Texture" id=5]
 [ext_resource path="res://craftpix-net-647526-free-3-cyberpunk-characters-pixel-art/1 Biker/Biker_death.png" type="Texture" id=6]
+[ext_resource path="res://Protagonista.gd" type="Script" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 2 )
@@ -49,6 +66,54 @@ region = Rect2( 288, 0, 48, 48 )
 atlas = ExtResource( 3 )
 region = Rect2( 336, 0, 48, 48 )
 
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 4 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 6 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 6 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 6 )
+region = Rect2( 240, 0, 48, 48 )
+
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 48, 48 )
@@ -81,72 +146,13 @@ region = Rect2( 288, 0, 48, 48 )
 atlas = ExtResource( 5 )
 region = Rect2( 336, 0, 48, 48 )
 
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 6 )
-region = Rect2( 48, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 6 )
-region = Rect2( 96, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 6 )
-region = Rect2( 144, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 6 )
-region = Rect2( 192, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 6 )
-region = Rect2( 240, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 4 )
-region = Rect2( 48, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 4 )
-region = Rect2( 144, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 4 )
-region = Rect2( 192, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 4 )
-region = Rect2( 240, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 48, 48 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 48, 48 )
-
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "Hurt",
@@ -157,9 +163,9 @@ animations = [ {
 "name": "Attack3",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
 "loop": true,
-"name": "Attack2",
+"name": "Attack",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
@@ -167,24 +173,25 @@ animations = [ {
 "name": "Death",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
-"loop": true,
-"name": "Idle",
+"name": "Attack2",
 "speed": 5.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+scale = Vector2( 10, 10 )
+script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 74, 40 )
+position = Vector2( 20.6, 37.7 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
-[node name="Biker" type="AnimatedSprite" parent="CollisionShape2D"]
-position = Vector2( 10, -8 )
+[node name="Biker" type="AnimatedSprite" parent="." groups=["Protagonista"]]
+position = Vector2( 26.8, 28.8 )
+scale = Vector2( 1, 1 )
 frames = SubResource( 6 )
-animation = "Death"
+animation = "Idle"
+frame = 2
+playing = true

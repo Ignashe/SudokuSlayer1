@@ -12,7 +12,7 @@ margin_bottom = -40.0
 [node name="TextureProgress" type="TextureProgress" parent="." groups=["Vida"]]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_scale = Vector2( 0.25, 0.15 )
+rect_scale = Vector2( 0.275, 0.15 )
 max_value = 50.0
 value = 50.0
 texture_under = ExtResource( 2 )
