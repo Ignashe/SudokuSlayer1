@@ -118,6 +118,7 @@ position = Vector2( 194.75, 289.75 )
 scale = Vector2( 4.92708, 5.44792 )
 frames = SubResource( 5 )
 animation = "menu"
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
@@ -125,7 +126,6 @@ position = Vector2( 855.25, 289.75 )
 scale = Vector2( 4.92708, 5.44792 )
 frames = SubResource( 5 )
 animation = "menu"
-frame = 3
 playing = true
 flip_h = true
 
@@ -137,5 +137,6 @@ texture = ExtResource( 2 )
 stream = ExtResource( 7 )
 autoplay = true
 
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/start game" to="CanvasLayer/Control/VBoxContainer" method="_on_start_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Opcions" to="CanvasLayer/Control/VBoxContainer" method="_on_Opcions_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/sortir" to="CanvasLayer/Control/VBoxContainer" method="_on_sortir_pressed"]
