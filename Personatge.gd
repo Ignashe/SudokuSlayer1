@@ -19,3 +19,7 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	move_and_collide(velocity * delta)
+
+
+func _on_Enemic_1_body_entered(body):
+	get_tree().change_scene("res://Escenes/Combat.tscn")

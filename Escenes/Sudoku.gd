@@ -6,7 +6,7 @@ var tamany = 40
 var arr = []
 var sudoku = []
 var sudoku_resolt 
-
+var buits = 0
 
 
 func crea_sudoku():
@@ -14,6 +14,7 @@ func crea_sudoku():
 	fill_numbers()
 	_eliminar_num()
 	set_arr()
+	contar_buits()
 	return sudoku
 
 
@@ -121,4 +122,9 @@ func _eliminar_num():
 	arr[posicions_quadrat[0]] = numero
 	arr[posicions_fila[0]] = numero_2
 	
-
+func contar_buits():
+	for fila in sudoku:
+		for n in fila:
+			if n == null:
+				buits += 1
+	

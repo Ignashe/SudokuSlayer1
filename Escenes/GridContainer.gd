@@ -2,6 +2,7 @@ extends GridContainer
 
 
 var sudoku = Sudoku.crea_sudoku()
+var buits = Sudoku.buits
 var text = []
 var correcte = false
 var sudoku_escrit = []
@@ -75,7 +76,7 @@ func _encert():
 		timer_resposta.stop()
 		timer_on = false
 		time = 15
-		Global.vida_enemic -= 2.5
+		Global.vida_enemic -= 10
 		Global.update_vida_enemic()
 		timer_on = true
 		timer_resposta.start()
