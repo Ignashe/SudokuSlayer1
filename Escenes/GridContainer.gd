@@ -110,6 +110,7 @@ func _on_Canvi_de_color_timeout():
 func _on_Temps_de_resposta_timeout():
 		timer_resposta.stop()
 		timer_on = false
+		Global.error = true
 		Global.vida -= 5
 		Global.update_vida()
 		time = 15
