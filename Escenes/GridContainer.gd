@@ -72,10 +72,13 @@ func mort():
 func guanyador():
 	pass
 func _encert():
+		timer_resposta.stop()
+		timer_on = false
 		time = 15
 		Global.vida_enemic -= 2.5
 		Global.update_vida_enemic()
-		
+		timer_on = true
+		timer_resposta.start()
 func _on_casella_canviada(fila, columna, n, casella, color):
 		var x = 0
 		var resolucio = sudoku_resolt[columna*9+fila]
@@ -101,8 +104,11 @@ func _on_Canvi_de_color_timeout():
 
 
 func _on_Temps_de_resposta_timeout():
+		timer_resposta.stop()
+		timer_on = false
 		Global.vida -= 5
 		Global.update_vida()
 		time = 15
+		timer_on = true
 		timer_resposta.start()
 	
