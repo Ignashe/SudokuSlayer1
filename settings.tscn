@@ -1,0 +1,175 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://media/Mario-Kart-DS.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://imatges/360_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg" type="Texture" id=2]
+[ext_resource path="res://imatges/images.jpg" type="Texture" id=3]
+[ext_resource path="res://GUI.gd" type="Script" id=4]
+[ext_resource path="res://opcions.tscn" type="PackedScene" id=5]
+[ext_resource path="res://santiago-banol-yandros-image.jpg" type="Texture" id=6]
+[ext_resource path="res://imatges/images (1).jpg" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.534168, 0.555555 )
+texture = ExtResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 4 )
+
+[node name="menu" type="Control" parent="CanvasLayer"]
+anchor_left = 0.363
+anchor_top = 0.1
+anchor_right = 0.637
+anchor_bottom = 0.805
+margin_left = -371.712
+margin_top = -60.0
+margin_right = -612.288
+margin_bottom = -443.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/menu"]
+anchor_left = 9.3
+anchor_top = 1.625
+anchor_right = 16.3
+anchor_bottom = 12.2
+margin_top = -7.62939e-06
+margin_right = -6.10352e-05
+margin_bottom = -6.10352e-05
+texture = ExtResource( 2 )
+patch_margin_left = 30
+patch_margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/menu"]
+anchor_left = 9.3
+anchor_top = 2.225
+anchor_right = 16.3
+anchor_bottom = 12.075
+margin_top = -7.62939e-06
+margin_right = -6.10352e-05
+margin_bottom = -3.05176e-05
+custom_constants/separation = 9
+
+[node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer"]
+margin_right = 279.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 1 )
+text = "MENU"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/menu/VBoxContainer"]
+margin_top = 42.0
+margin_right = 279.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="Continuar" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+margin_left = 29.0
+margin_top = 86.0
+margin_right = 249.0
+margin_bottom = 136.0
+rect_min_size = Vector2( 220, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/Continuar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "CONTINUAR"
+align = 1
+valign = 1
+
+[node name="NOVA PARTIDA" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+margin_left = 29.0
+margin_top = 145.0
+margin_right = 249.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 220, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/NOVA PARTIDA"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "NOVA PARTIDA"
+align = 1
+valign = 1
+
+[node name="CARREGAR PARTIDA" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+margin_left = 29.0
+margin_top = 204.0
+margin_right = 249.0
+margin_bottom = 254.0
+rect_min_size = Vector2( 220, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/CARREGAR PARTIDA"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "GUARDA PARTIDA"
+align = 1
+valign = 1
+
+[node name="OPCIONS" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+margin_left = 29.0
+margin_top = 263.0
+margin_right = 249.0
+margin_bottom = 313.0
+rect_min_size = Vector2( 220, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/OPCIONS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "OPCIONS"
+align = 1
+valign = 1
+
+[node name="SORTIR" type="TextureButton" parent="CanvasLayer/menu/VBoxContainer"]
+margin_left = 29.0
+margin_top = 322.0
+margin_right = 249.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 220, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+expand = true
+
+[node name="Label" type="Label" parent="CanvasLayer/menu/VBoxContainer/SORTIR"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "SORTIR"
+align = 1
+valign = 1
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
+
+[connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/OPCIONS" to="CanvasLayer" method="_on_OPCIONS_pressed"]
+[connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/SORTIR" to="CanvasLayer" method="_on_SORTIR_pressed"]
