@@ -5,7 +5,8 @@ func _ready():
 func _process(delta):
 	var encert = Global.encert
 	var error = Global.error
-	Global.update_time()
+	Global.update_encert()
+	Global.update_error()	
 	if encert == true:
 		animacio.play('Attack')
 	else:
