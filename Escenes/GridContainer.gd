@@ -66,9 +66,11 @@ func _error(casella,color):
 		color.modulate = Color(255,0,0)
 		caselles_canviades.append(color)
 		timer.start()
+		Global.error = true
+		yield(get_tree().create_timer(1), 'timeout')
 		Global.vida -= 5
 		Global.update_vida()
-		Global.error = true
+		
 func mort():
 	pass
 func guanyador():
@@ -111,6 +113,7 @@ func _on_Temps_de_resposta_timeout():
 		timer_resposta.stop()
 		timer_on = false
 		Global.error = true
+		yield(get_tree().create_timer(1.5), 'timeout')
 		Global.vida -= 5
 		Global.update_vida()
 		time = 15
