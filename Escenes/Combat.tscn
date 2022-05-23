@@ -41,3 +41,5 @@ margin_right = 500.0
 position = Vector2( -13.0001, 3.00002 )
 
 [node name="Temps animacions" type="Timer" parent="." groups=["Atack 1"]]
+
+[connection signal="timeout" from="Temps animacions" to="KinematicBody2D" method="_on_Temps_animacions_timeout"]

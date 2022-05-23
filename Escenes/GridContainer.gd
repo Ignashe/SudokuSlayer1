@@ -68,6 +68,7 @@ func _error(casella,color):
 		timer.start()
 		Global.vida -= 5
 		Global.update_vida()
+		Global.error = true
 func mort():
 	pass
 func guanyador():
