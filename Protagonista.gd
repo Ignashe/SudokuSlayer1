@@ -14,7 +14,8 @@ func _process(delta):
 	if error == true:
 		yield(get_tree().create_timer(1), 'timeout')
 		animacio.play('Hurt')
-		yield(get_tree().create_timer(0.5), 'timeout')
+		yield(get_tree().create_timer(0.25), 'timeout')
+		animacio.play('Idle')
 		Global.update_encert()
 		Global.update_error()
 	else:
