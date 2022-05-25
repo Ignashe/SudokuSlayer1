@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Escenes/Control.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/BarraVida.tscn" type="PackedScene" id=2]
@@ -6,14 +6,8 @@
 [ext_resource path="res://Fonts/new_dynamicfont2.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Personatge.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemic1.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Escenes/istockphoto-1091835666-170667a.jpg" type="Texture" id=7]
 
 [node name="Combat" type="Node2D"]
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 512.75, 357 )
-scale = Vector2( 1.94381, 2.17073 )
-texture = ExtResource( 7 )
 
 [node name="Sudoku" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
