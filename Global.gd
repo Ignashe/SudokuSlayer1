@@ -17,3 +17,7 @@ func update_vida():
 	get_tree().get_nodes_in_group('Vida')[0].value = vida
 func update_vida_enemic():
 	get_tree().get_nodes_in_group('VidaEnemic')[0].value = vida_enemic
+
+func _process(delta):
+	if Input.is_action_pressed('esc'):
+		get_tree().change_scene("res://settings.tscn")

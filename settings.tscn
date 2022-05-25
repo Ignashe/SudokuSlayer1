@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://media/Mario-Kart-DS.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://imatges/360_F_116883786_wuckft1sNw1ouQfJ6FuquZnxea3qBlxy.jpg" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://GUI.gd" type="Script" id=4]
 [ext_resource path="res://opcions.tscn" type="PackedScene" id=5]
 [ext_resource path="res://santiago-banol-yandros-image.jpg" type="Texture" id=6]
+[ext_resource path="res://controls.tscn" type="PackedScene" id=7]
 [ext_resource path="res://imatges/images (1).jpg" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -107,7 +108,7 @@ expand = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = SubResource( 2 )
-text = "NOVA PARTIDA"
+text = "CONTROLS"
 align = 1
 valign = 1
 
@@ -126,7 +127,7 @@ expand = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = SubResource( 2 )
-text = "GUARDA PARTIDA"
+text = "MAPA"
 align = 1
 valign = 1
 
@@ -171,5 +172,10 @@ valign = 1
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 5 )]
 visible = false
 
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/NOVA PARTIDA" to="CanvasLayer" method="_on_NOVA_PARTIDA_pressed"]
+[connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/CARREGAR PARTIDA" to="CanvasLayer" method="_on_CARREGAR_PARTIDA_pressed"]
 [connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/OPCIONS" to="CanvasLayer" method="_on_OPCIONS_pressed"]
 [connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/SORTIR" to="CanvasLayer" method="_on_SORTIR_pressed"]

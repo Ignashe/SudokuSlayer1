@@ -22,3 +22,13 @@ func _on_OPCIONS_pressed():
 
 func _on_SORTIR_pressed():
 	get_tree().change_scene("res://MenuPrincipal.tscn")
+
+
+func _on_CARREGAR_PARTIDA_pressed():
+	get_tree().change_scene("res://Overworld.tscn")
+	
+
+
+
+func _on_NOVA_PARTIDA_pressed():
+	pass # Replace with function body.
