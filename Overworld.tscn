@@ -160,3 +160,5 @@ volume_db = -30.588
 autoplay = true
 
 [connection signal="body_entered" from="YSort/Enemic 1" to="YSort/Personatge" method="_on_Enemic_1_body_entered"]
+[connection signal="body_entered" from="YSort/Enemic 2" to="YSort/Personatge" method="_on_Enemic_2_body_entered"]
+[connection signal="body_entered" from="YSort/Enemic 3" to="YSort/Personatge" method="_on_Enemic_3_body_entered"]

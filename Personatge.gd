@@ -28,3 +28,9 @@ func _physics_process(delta):
 
 func _on_Enemic_1_body_entered(body):
 	get_tree().change_scene("res://Escenes/Combat.tscn")
+func _on_Enemic_2_body_entered(body):
+	get_tree().change_scene("res://Escenes/Combat.tscn")
+
+
+func _on_Enemic_3_body_entered(body):
+	get_tree().change_scene("res://Escenes/Combat.tscn")
