@@ -24,3 +24,11 @@ func _on_Sudoku_error():
 func _on_Punk_animation_finished():
 	emit_signal("final_animacio", $Punk.animation)
 	animacio.play('Idle')
+	
+	
+
+
+func _on_Sudoku_victoria():
+	animacio.play('Death')
+	yield(get_tree().create_timer(2), 'timeout')
+#	get_tree().change_scene("res://gameover.tscn")

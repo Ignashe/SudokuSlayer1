@@ -85,6 +85,7 @@ func _encert():
 		timer_on = true
 		timer_resposta.start()
 		if Global.vida_enemic == 0:
+			timer_on = false
 			emit_signal('victoria')
 func _on_casella_canviada(fila, columna, n, casella, color):
 		var x = 0
