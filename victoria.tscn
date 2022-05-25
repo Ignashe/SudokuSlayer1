@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://imatges/images.jpg" type="Texture" id=1]
+[ext_resource path="res://imatges/images (1).jpg" type="Texture" id=2]
+[ext_resource path="res://media/icons8-take-it-easy-90.png" type="Texture" id=3]
+[ext_resource path="res://istockphoto-1268272342-612x612.jpg" type="Texture" id=4]
+[ext_resource path="res://media/blank-sudoku-grid.png" type="Texture" id=5]
+[ext_resource path="res://media/Mario-Kart-DS.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://media/Two Steps From Hell  Victory.mp3" type="AudioStream" id=7]
+[ext_resource path="res://VBoxContainer.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 6 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511, 301 )
+scale = Vector2( 1.6732, 0.980392 )
+texture = ExtResource( 4 )
+
+[node name="Blank-sudoku-grid" type="Sprite" parent="."]
+position = Vector2( 500, 143 )
+scale = Vector2( 0.544147, 0.424107 )
+texture = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 376.0
+margin_top = 409.0
+margin_right = 643.0
+margin_bottom = 512.0
+script = ExtResource( 8 )
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+margin_right = 267.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+rect_pivot_offset = Vector2( 96, -87 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = -23.0
+margin_right = -1.0
+margin_bottom = 19.0
+custom_fonts/font = SubResource( 1 )
+text = "SORTIR"
+align = 1
+valign = 1
+
+[node name="Icons8-take-it-easy-90" type="Sprite" parent="."]
+position = Vector2( 513, 134 )
+scale = Vector2( 2, 1.8 )
+texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -29.714
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="VBoxContainer" method="_on_TextureButton_pressed"]
