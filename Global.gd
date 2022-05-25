@@ -3,9 +3,11 @@ extends Node
 var errors = 0
 var vida = 50
 var vida_enemic
-
-
+var caselles 
 	
+#func update_panels(panels,n):
+#	if y == 1:
+#		caselles = panels
 
 func _update_maxim_vida(buits):
 	vida_enemic = buits
