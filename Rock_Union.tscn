@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://kenney_rtssci-fi/PNG/Default size/Environment/scifiEnvironment_18.png" type="Texture" id=1]
+[ext_resource path="res://kenney_rtssci-fi/PNG/Default size/Environment/scifiEnvironment_19.png" type="Texture" id=2]
+[ext_resource path="res://kenney_rtssci-fi/PNG/Default size/Environment/scifiEnvironment_20.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 192.5, 36.5 )
+
+[node name="Rock_Union" type="StaticBody2D"]
+
+[node name="ScifiEnvironment18" type="Sprite" parent="."]
+position = Vector2( 866.75, -509.875 )
+scale = Vector2( 8.47656, 7.62891 )
+texture = ExtResource( 1 )
+
+[node name="ScifiEnvironment20" type="Sprite" parent="."]
+position = Vector2( 725.75, -470.25 )
+scale = Vector2( 5.13281, 5.05469 )
+texture = ExtResource( 3 )
+
+[node name="ScifiEnvironment21" type="Sprite" parent="."]
+position = Vector2( 1002, -449 )
+scale = Vector2( 5.13281, 5.05469 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="ScifiEnvironment19" type="Sprite" parent="."]
+position = Vector2( 853, -426 )
+scale = Vector2( 4.14063, 4.17188 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 862.5, -437.5 )
+shape = SubResource( 1 )
