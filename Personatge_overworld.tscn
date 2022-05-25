@@ -34,17 +34,18 @@ radius = 26.0
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 111, 72 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "Idle"
-frame = 3
+frame = 2
 speed_scale = 2.0
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 112, 83 )
+position = Vector2( -3, 9 )
 shape = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -1, -1 )
 current = true
+zoom = Vector2( 0.25, 0.25 )
