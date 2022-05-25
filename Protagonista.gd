@@ -24,4 +24,5 @@ func _on_Sudoku_error():
 
 func _on_Sudoku_mort_protagonista():
 	animacio.play('Death')
-	
+	yield(get_tree().create_timer(2), 'timeout')
+	get_tree().change_scene("res://gameover.tscn")

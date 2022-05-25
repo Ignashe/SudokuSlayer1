@@ -18,6 +18,7 @@ signal encert
 signal error
 signal mort_protagonista 
 signal victoria
+
 func _ready():
 	timer_resposta.set_wait_time(15)
 	timer_resposta.start()
@@ -63,16 +64,16 @@ func sudoku_escrit():
 		x += 1
 	
 func _error(casella,color):
+		emit_signal("error")
 		color.modulate = Color(255,0,0)
 		caselles_canviades.append(color)
 		timer.start()
-		emit_signal("error")
 		yield(get_tree().create_timer(1), 'timeout')
 		Global.vida -= 5
 		Global.update_vida()
 		if Global.vida == 0:
 			emit_signal("mort_protagonista")
-
+			timer_on = false
 func _encert():
 		timer_resposta.stop()
 		timer_on = false
@@ -116,6 +117,7 @@ func _on_Temps_de_resposta_timeout():
 		Global.vida -= 5
 		Global.update_vida()
 		time = 15
-		timer_on = true
-		timer_resposta.start()
+		if Global.vida > 0:
+			timer_on = true
+			timer_resposta.start()
 	
