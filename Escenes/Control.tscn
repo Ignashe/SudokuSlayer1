@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escenes/Casella.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/GridContainer.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/Sudoku-Grid.png" type="Texture" id=3]
+[ext_resource path="res://Escenes/Graella_Sudoku.gd" type="Script" id=4]
 
 [node name="Sudoku" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -1.0
+script = ExtResource( 4 )
 
 [node name="Temps de resposta" type="Timer" parent="."]
 wait_time = 15.0
@@ -482,3 +484,7 @@ centered = false
 
 [connection signal="timeout" from="Temps de resposta" to="GridContainer" method="_on_Temps_de_resposta_timeout"]
 [connection signal="timeout" from="Canvi de color" to="GridContainer" method="_on_Canvi_de_color_timeout"]
+[connection signal="encert" from="GridContainer" to="." method="_on_GridContainer_encert"]
+[connection signal="error" from="GridContainer" to="." method="_on_GridContainer_error"]
+[connection signal="mort_protagonista" from="GridContainer" to="." method="_on_GridContainer_mort_protagonista"]
+[connection signal="victoria" from="GridContainer" to="." method="_on_GridContainer_victoria"]
