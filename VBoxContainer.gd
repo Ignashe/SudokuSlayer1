@@ -35,3 +35,7 @@ func _on_TextureButton3_pressed():
 
 func _on_start_game_pressed():
 	get_tree().change_scene("res://Overworld.tscn")
+
+
+func _on_TextureButton_pressed():
+	get_tree().quit()

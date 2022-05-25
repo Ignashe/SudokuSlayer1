@@ -31,4 +31,4 @@ func _on_Punk_animation_finished():
 func _on_Sudoku_victoria():
 	animacio.play('Death')
 	yield(get_tree().create_timer(2), 'timeout')
-#	get_tree().change_scene("res://gameover.tscn")
+	get_tree().change_scene("res://victoria.tscn")
