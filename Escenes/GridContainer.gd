@@ -12,7 +12,7 @@ onready var text_temps = get_tree().get_nodes_in_group('Temps')[0]
 var caselles_canviades = []
 var timer_on = false
 var time = 15
-var n = 0
+
 
 signal encert
 signal error
@@ -44,7 +44,7 @@ func _process(delta):
 	
 func _escriure():
 	var panels = get_children()
-#	Global.update_panels(panels)
+	
 	var x = 0
 	while x < 81:
 		for i in sudoku:

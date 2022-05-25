@@ -26,7 +26,6 @@ func _on_sortir_pressed():
 
 func _on_TextureButton2_pressed():
 	get_tree().change_scene("res://MenuPrincipal.tscn")
-	
 
 
 
