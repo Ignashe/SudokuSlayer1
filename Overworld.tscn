@@ -183,3 +183,5 @@ position = Vector2( -24, -528 )
 
 [node name="Rock" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( 267, 441 )
+
+[connection signal="body_entered" from="YSort/Enemic 1" to="YSort/Personatge" method="_on_Enemic_1_body_entered"]
