@@ -175,6 +175,7 @@ visible = false
 [node name="Node2D" parent="." instance=ExtResource( 7 )]
 visible = false
 
+[connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/Continuar" to="CanvasLayer" method="_on_Continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/NOVA PARTIDA" to="CanvasLayer" method="_on_NOVA_PARTIDA_pressed"]
 [connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/CARREGAR PARTIDA" to="CanvasLayer" method="_on_CARREGAR_PARTIDA_pressed"]
 [connection signal="pressed" from="CanvasLayer/menu/VBoxContainer/OPCIONS" to="CanvasLayer" method="_on_OPCIONS_pressed"]

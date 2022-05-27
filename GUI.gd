@@ -31,4 +31,8 @@ func _on_CARREGAR_PARTIDA_pressed():
 
 
 func _on_NOVA_PARTIDA_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://controls.tscn")
+
+
+func _on_Continuar_pressed():
+	get_tree().change_scene("res://Overworld.tscn")

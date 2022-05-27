@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenes/Control.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenes/BarraVida.tscn" type="PackedScene" id=2]
@@ -7,8 +7,14 @@
 [ext_resource path="res://Personatge.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemic1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Escenes/this-world-has-gone-crazy-15500.mp3" type="AudioStream" id=7]
+[ext_resource path="res://9911d4dfde12000f8dec7813c3482d80.jpg" type="Texture" id=8]
 
 [node name="Combat" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.533333, 0.555556 )
+texture = ExtResource( 8 )
 
 [node name="Sudoku" parent="." instance=ExtResource( 1 )]
 anchor_right = 0.0
